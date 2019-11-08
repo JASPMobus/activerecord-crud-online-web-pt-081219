@@ -64,7 +64,7 @@ def can_find_using_where_clause_and_be_sorted
   # release date descending
   
   movies = Movie.all.filter { |m| m.release_date > 2002 }
-  movies.sort { |m1, m2| m1.release_date <=> m2.release_date}
+  movies.sort { |m1, m2| m2.release_date <=> m1.release_date}
 end
 
 def can_be_found_updated_and_saved
